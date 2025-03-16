@@ -1,0 +1,16 @@
+aspring:
+  datasource:
+#    url: jdbc:h2:mem:bookstoredb
+    url: jdbc:h2:file:C:/Users/Rohan Ravi/test;AUTO_SERVER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
