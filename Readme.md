@@ -120,3 +120,16 @@ Swagger UI can be accessed at: `http://localhost:8080/swagger-ui.html`
 - Verify database connection settings
 - Review application logs for detailed error information
 
+## Development Challenges and Reflections
+
+### Challenges Faced
+1. Implementing soft delete mechanism
+2. Ensuring robust error handling
+3. Designing flexible update methods
+
+### Potential Improvements
+1. Implement comprehensive input validation
+2. Add more advanced search capabilities
+3. Develop a frontend interface
+4. Implement user authentication
+5. Add more  unit and integration tests
