@@ -113,14 +113,6 @@ Swagger UI can be accessed at: `http://localhost:8080/swagger-ui.html`
    java -jar target/BookManagementSystem-1.0-SNAPSHOT.jar
    ```
 
-## Future Enhancements
-
-- Implement user authentication
-- Add more advanced search capabilities
-- Create comprehensive logging
-- Develop a frontend interface
-- Implement more robust error handling
-
 ## Troubleshooting
 
 - Ensure Java 17 is installed
@@ -136,12 +128,3 @@ Swagger UI can be accessed at: `http://localhost:8080/swagger-ui.html`
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Your Name - your.email@example.com
-
-Project Link: [https://github.com/your-username/digital-library-management](https://github.com/your-username/digital-library-management)
