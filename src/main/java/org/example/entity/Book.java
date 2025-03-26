@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
- @Entity
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,16 +25,26 @@ public class Book {
 
     private String author;
 
-    private double price;
+    private String genre;
 
-    public Book(String title, String author, double price){
+     private BookStatus availability;
+
+    public Book(String title, String author, String genre ,BookStatus availability ){
         this.title = title;
         this.author = author;
-        this.price = price;
+        this.genre = genre;
+        this.availability = availability;
+    }
+
+    // Validation methods
+    public boolean isValid() {
+        return title != null && !title.trim().isEmpty() &&
+                author != null && !author.trim().isEmpty() &&
+                availability != null;
     }
 
 
-    // New internal tracking fields
+    // internal tracking fields
     private LocalDateTime createdAt;
     private String createdBy;
     private LocalDateTime lastModified;

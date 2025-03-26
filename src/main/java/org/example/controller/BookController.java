@@ -22,15 +22,13 @@ public class BookController {
         this.bookService = bookService;
     }
 
-// This is bad practice
-//    @Autowired
-//    private BookService bookService;
+
 
     @PostMapping("/createBook")
     public ResponseEntity<String> createBook(@RequestBody BookRequest bookRequest) {
        try{
            String result = bookService.createBook(bookRequest);
-           return new ResponseEntity<>(result, HttpStatus.OK);
+           return new ResponseEntity<>(result, HttpStatus.CREATED);
        } catch (Exception e){
            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
        }
@@ -57,6 +55,29 @@ public class BookController {
             }
     }
 
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Book>> searchBooksByTitle(@RequestParam String title) {
+        try {
+            List<Book> books = bookService.searchBooksByTitle(title);
+            return new ResponseEntity<>(books, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<String> updateBook(@PathVariable Long id, @RequestBody BookRequest bookRequest) {
+        try {
+            String result = bookService.updateBook(id, bookRequest);
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
+    //soft deletion check i am not deleting
     @GetMapping("/admin/deleted-books")
     public ResponseEntity<List<Book>> getDeletedBooks() {
         try {

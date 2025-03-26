@@ -3,6 +3,7 @@ package org.example.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.entity.BookStatus;
 
 
 @Data
@@ -11,7 +12,8 @@ import lombok.NoArgsConstructor;
 public class BookRequest {
     private String title;
     private String author;
-    private double price;
+    private String genre ;
+    private BookStatus availability;
 }
 
 
