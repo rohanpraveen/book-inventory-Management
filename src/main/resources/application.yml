@@ -3,8 +3,8 @@ spring:
 #    url: jdbc:h2:mem:bookstoredb
     url: jdbc:h2:file:C:\\Users\\Rohan Ravi\\Downloads\\Test;AUTO_SERVER=TRUE
     driverClassName: org.h2.Driver
-    username: sa
-    password:
+    username: ****
+    password: ****
 
   jpa:
     hibernate:
